@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-30
+
 ### Changed
 
 - Prepare npm distribution and advance the GitHub tag install example to `v0.1.1`.
@@ -27,5 +29,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fenced HTTP API using the DSH connection trust service.
 - Unit tests plus in-process SFTP/FTP integration tests.
 
-[Unreleased]: https://github.com/zhu0109/dsh-server-directory/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/zhu0109/dsh-server-directory/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/zhu0109/dsh-server-directory/releases/tag/v0.1.1
 [0.1.0]: https://github.com/zhu0109/dsh-server-directory/releases/tag/v0.1.0

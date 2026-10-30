@@ -1,6 +1,6 @@
 {
   "name": "dsh-server-directory",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Server directory browser for DeepSeek Harness: multi-server SFTP/FTP browsing and file management in the right sidebar.",
   "type": "module",
   "license": "MIT",
