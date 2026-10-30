@@ -1,7 +1,7 @@
 # DSH Server Directory 使用手册
 
 <p align="center">
-  <img src="images/01-main-panel.png" width="420" alt="DSH 服务器目录面板" />
+  <img src="https://gcore.jsdelivr.net/gh/zhu0109/dsh-server-directory@main/docs/images/01-main-panel.png" width="420" alt="DSH 服务器目录面板" />
 </p>
 
 <p align="center"><sub>右侧栏中的服务器目录面板：多服务器切换、路径导航、文件列表和操作工具栏</sub></p>
@@ -96,7 +96,7 @@ dsh plugin --profile desktop add --ignore-scripts "link:C:\Users\18798\Desktop\d
 ## 4. 界面概览
 
 <p align="center">
-  <img src="images/01-main-panel.png" width="420" alt="服务器目录主界面" />
+  <img src="https://gcore.jsdelivr.net/gh/zhu0109/dsh-server-directory@main/docs/images/01-main-panel.png" width="420" alt="服务器目录主界面" />
 </p>
 
 <p align="center"><sub>图 1：连接服务器后的主界面</sub></p>
@@ -140,7 +140,7 @@ dsh plugin --profile desktop add --ignore-scripts "link:C:\Users\18798\Desktop\d
 ## 5. 添加服务器
 
 <p align="center">
-  <img src="images/03-add-server.png" width="420" alt="添加服务器表单" />
+  <img src="https://gcore.jsdelivr.net/gh/zhu0109/dsh-server-directory@main/docs/images/03-add-server.png" width="420" alt="添加服务器表单" />
 </p>
 
 <p align="center"><sub>图 2：添加服务器表单</sub></p>
@@ -175,7 +175,7 @@ FTP 为明文协议，面板会显示警告。能使用 SFTP 时应优先使用 
 ## 6. 服务器管理与多服务器切换
 
 <p align="center">
-  <img src="images/02-server-manager.png" width="420" alt="服务器管理弹窗" />
+  <img src="https://gcore.jsdelivr.net/gh/zhu0109/dsh-server-directory@main/docs/images/02-server-manager.png" width="420" alt="服务器管理弹窗" />
 </p>
 
 <p align="center"><sub>图 3：服务器管理：连接状态、连接/断开、编辑和删除</sub></p>
@@ -205,7 +205,7 @@ FTP 为明文协议，面板会显示警告。能使用 SFTP 时应优先使用 
 ## 7. 首次连接与 SFTP 主机指纹
 
 <p align="center">
-  <img src="images/05-host-key.png" width="420" alt="SFTP 主机指纹确认" />
+  <img src="https://gcore.jsdelivr.net/gh/zhu0109/dsh-server-directory@main/docs/images/05-host-key.png" width="420" alt="SFTP 主机指纹确认" />
 </p>
 
 <p align="center"><sub>图 4：首次连接 SFTP 服务器时确认 SHA256 主机指纹</sub></p>
@@ -243,7 +243,7 @@ FTP/FTPS 不使用 SSH 主机密钥。FTPS 的证书校验由 TLS 层完成；�
 ## 9. 目录和文件操作
 
 <p align="center">
-  <img src="images/04-file-actions.png" width="420" alt="目录右键菜单" />
+  <img src="https://gcore.jsdelivr.net/gh/zhu0109/dsh-server-directory@main/docs/images/04-file-actions.png" width="420" alt="目录右键菜单" />
 </p>
 
 <p align="center"><sub>图 5：目录右键菜单：打开、上传、新建文件夹、重命名、删除</sub></p>
@@ -283,7 +283,7 @@ SFTP/FTP 适配器会尽量把符号链接标注为“链接”或链接指向�
 ## 10. 上传文件
 
 <p align="center">
-  <img src="images/06-upload.png" width="420" alt="上传队列与进度" />
+  <img src="https://gcore.jsdelivr.net/gh/zhu0109/dsh-server-directory@main/docs/images/06-upload.png" width="420" alt="上传队列与进度" />
 </p>
 
 <p align="center"><sub>图 6：上传队列、实时进度和取消按钮</sub></p>
