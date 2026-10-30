@@ -4,6 +4,15 @@
   "description": "Server directory browser for DeepSeek Harness: multi-server SFTP/FTP browsing and file management in the right sidebar.",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhu0109/dsh-server-directory.git"
+  },
+  "homepage": "https://github.com/zhu0109/dsh-server-directory",
+  "bugs": {
+    "url": "https://github.com/zhu0109/dsh-server-directory/issues"
+  },
+  "packageManager": "pnpm@11.28.5",
   "engines": {
     "node": ">=22.12.0",
     "dsh": "^0.2.1-rc.1"
@@ -35,7 +44,8 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc --noEmit && tsdown",
     "test": "vitest run",
-    "check": "tsc --noEmit && vitest run && tsdown"
+    "check": "tsc --noEmit && vitest run && tsdown",
+    "release": "node scripts/release.mjs"
   },
   "dependencies": {
     "basic-ftp": "^5.0.5",

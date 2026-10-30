@@ -1,5 +1,9 @@
 # DSH Server Directory
 
+[![CI](https://github.com/zhu0109/dsh-server-directory/actions/workflows/ci.yml/badge.svg)](https://github.com/zhu0109/dsh-server-directory/actions/workflows/ci.yml)
+[![Release](https://github.com/zhu0109/dsh-server-directory/actions/workflows/release.yml/badge.svg)](https://github.com/zhu0109/dsh-server-directory/actions/workflows/release.yml)
+[![Version](https://img.shields.io/github/v/tag/zhu0109/dsh-server-directory?label=version)](https://github.com/zhu0109/dsh-server-directory/tags)
+
 在 DeepSeek Harness 右侧栏中管理多台远端服务器的文件系统。支持 **SFTP、FTP、显式 FTPS、隐式 FTPS**，可以浏览目录、新建文件夹、重命名、递归删除、下载文件，以及把本地文件拖拽到当前目录或任意目录行上传。
 
 ## 功能
@@ -31,6 +35,12 @@ dsh plugin --profile desktop add --ignore-scripts "link:C:\Users\18798\Desktop\d
 `--ignore-scripts` 是因为 ssh2 的可选原生加速模块需要本地 C++ 编译工具链；不编译时 ssh2 会使用纯 JS 实现，功能不受影响。若你的 pnpm 仍提示 ignored builds，请对 `ssh2` / `cpu-features` 运行 `pnpm approve-builds` 或保留 `--ignore-scripts`。
 
 重启 DSH 并硬刷新浏览器页面后，在右侧栏的 `+` 菜单选择 **服务器目录**。
+
+也可以直接从 GitHub 的某个版本 tag 安装已提交的构建产物：
+
+```powershell
+dsh plugin --profile desktop add --ignore-scripts "github:zhu0109/dsh-server-directory#v0.1.0"
+```
 
 > 当前工作区已以本地链接方式安装。DSH 重启后才会加载新的 host 半。
 
@@ -80,3 +90,20 @@ pnpm build
 ```
 
 测试包含路径/权限策略、凭据存储、错误映射、API 行为、客户端首屏渲染，以及使用进程内 SFTP / FTP 服务器的真实连接、上传、下载、重命名和递归删除集成测试。
+
+## 版本管理
+
+项目采用 [Semantic Versioning](https://semver.org/)，版本 tag 统一为 `vX.Y.Z`，变更记录见 [CHANGELOG.md](CHANGELOG.md)。
+
+- `CI` workflow 在每次 push 到 `main` 和每个 pull request 上执行类型检查、测试和构建。
+- 推送 `v*` tag 会触发 `Release` workflow：校验 tag 与 `package.json` 一致、重新构建测试、生成 `.tgz` 并创建 GitHub Release。
+- 本地发布使用：
+
+```powershell
+pnpm release patch
+pnpm release minor
+pnpm release 1.0.0
+git push origin main --follow-tags
+```
+
+也可以在确认后使用 `pnpm release patch --push`。完整流程和版本规则见 [RELEASING.md](RELEASING.md)。
