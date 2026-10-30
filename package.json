@@ -48,7 +48,7 @@
     "release": "node scripts/release.mjs"
   },
   "dependencies": {
-    "basic-ftp": "^5.0.5",
+    "basic-ftp": "^6.2.3",
     "ssh2": "^1.17.0"
   },
   "peerDependencies": {

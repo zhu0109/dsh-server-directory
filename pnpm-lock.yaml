@@ -15,8 +15,8 @@ importers:
         specifier: '>=0.2.1-rc.1 <0.3.0-0'
         version: 0.2.1-rc.4(@deepseek-ai/cordis@4.0.5)
       basic-ftp:
-        specifier: ^5.0.5
-        version: 5.3.1
+        specifier: ^6.2.3
+        version: 6.2.3
       dsh-better-sidebar:
         specifier: ^0.28.0
         version: 0.28.2(4f52782074e5312c2332141f928dee51)
@@ -985,8 +985,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  basic-ftp@5.3.1:
-    resolution: {integrity: sha512-bopVNp6ugyA150DDuZfPFdt1KZ5a94ZDiwX4hMgZDzF+GttD80lEy8kj98kbyhLXnPvhtIo93mdnLIjpCAeeOw==}
+  basic-ftp@6.2.3:
+    resolution: {integrity: sha512-T7GYtQ2eKJUN5YORG7A8u2WfB9JMN0a4/wl3MI64qq2qTRfa3FXzoNq0DDojZDkDyStcL+TkfKsz4JHEZx5kGQ==}
     engines: {node: '>=10.0.0'}
 
   bcrypt-pbkdf@1.0.2:
@@ -3027,7 +3027,7 @@ snapshots:
   balanced-match@1.0.2:
     optional: true
 
-  basic-ftp@5.3.1: {}
+  basic-ftp@6.2.3: {}
 
   bcrypt-pbkdf@1.0.2:
     dependencies:
