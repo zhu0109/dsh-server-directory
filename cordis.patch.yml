@@ -1,0 +1,6 @@
+# dsh-server-directory bundle patch.
+# The official installer appends this package to dsh.profile.bundles and then
+# merges this single insert row into the profile tree.
+- insert:
+    - id: dsh-server-directory
+      name: 'dsh-server-directory'
