@@ -19,17 +19,10 @@
 
 ## 安装
 
-在插件目录完成构建：
+从 npm 安装指定版本：
 
 ```powershell
-pnpm install
-pnpm build
-```
-
-然后安装到 desktop profile：
-
-```powershell
-dsh plugin --profile desktop add --ignore-scripts "link:C:\Users\18798\Desktop\dsh-server-directory"
+dsh plugin --profile desktop add --ignore-scripts dsh-server-directory@0.1.1
 ```
 
 `--ignore-scripts` 是因为 ssh2 的可选原生加速模块需要本地 C++ 编译工具链；不编译时 ssh2 会使用纯 JS 实现，功能不受影响。若你的 pnpm 仍提示 ignored builds，请对 `ssh2` / `cpu-features` 运行 `pnpm approve-builds` 或保留 `--ignore-scripts`。
@@ -39,7 +32,15 @@ dsh plugin --profile desktop add --ignore-scripts "link:C:\Users\18798\Desktop\d
 也可以直接从 GitHub 的某个版本 tag 安装已提交的构建产物：
 
 ```powershell
-dsh plugin --profile desktop add --ignore-scripts "github:zhu0109/dsh-server-directory#v0.1.0"
+dsh plugin --profile desktop add --ignore-scripts "github:zhu0109/dsh-server-directory#v0.1.1"
+```
+
+本地开发安装：
+
+```powershell
+pnpm install
+pnpm build
+dsh plugin --profile desktop add --ignore-scripts "link:C:\Users\18798\Desktop\dsh-server-directory"
 ```
 
 > 当前工作区已以本地链接方式安装。DSH 重启后才会加载新的 host 半。

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Prepare npm distribution and advance the GitHub tag install example to `v0.1.1`.
+
 ## [0.1.0] - 2026-10-30
 
 ### Added
