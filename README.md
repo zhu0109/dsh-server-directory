@@ -6,6 +6,8 @@
 
 在 DeepSeek Harness 右侧栏中管理多台远端服务器的文件系统。支持 **SFTP、FTP、显式 FTPS、隐式 FTPS**，可以浏览目录、新建文件夹、重命名、递归删除、下载文件，以及把本地文件拖拽到当前目录或任意目录行上传。
 
+详细图文使用手册见 [docs/plugin-guide.md](docs/plugin-guide.md)。
+
 ## 功能
 
 - 多服务器：添加、编辑、删除、切换，连接互相独立。

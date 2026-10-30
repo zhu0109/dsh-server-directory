@@ -653,11 +653,10 @@ export function ServerDirectoryPanel({ visible }: { visible: boolean }): ReactNo
     fileInputRef.current?.click()
   }
 
-  const onFileInput = (files: FileList | null): void => {
-    if (!files || files.length === 0) return
+  const onFileInput = (files: File[]): void => {
+    if (files.length === 0) return
     const directory = pendingUploadDir.current || currentPathRef.current
-    const list = Array.from(files)
-    void uploadFiles(list, directory)
+    void uploadFiles(files, directory)
   }
 
   const openContext = (event: ReactMouseEvent, entry?: RemoteEntry): void => {
@@ -1174,7 +1173,9 @@ export function ServerDirectoryPanel({ visible }: { visible: boolean }): ReactNo
         type="file"
         multiple
         onChange={(event) => {
-          const files = event.target.files
+          // Copy the FileList before clearing the input: clearing `value`
+          // empties the live FileList and previously made uploads no-op.
+          const files = Array.from(event.target.files ?? [])
           event.target.value = ''
           onFileInput(files)
         }}

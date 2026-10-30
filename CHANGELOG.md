@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Illustrated Chinese plugin guide with feature screenshots in `docs/plugin-guide.md`.
+
+### Fixed
+
+- Keep the selected `FileList` snapshot before clearing the upload input, so uploading through the file picker starts reliably.
+
 ## [0.1.1] - 2026-10-30
 
 ### Changed
