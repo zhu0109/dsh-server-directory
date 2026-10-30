@@ -74,8 +74,17 @@ async function freePort(): Promise<number> {
  * operations the adapter needs, which lets the integration test exercise the
  * real ssh2 handshake, host-key prompt, streaming upload/download and list.
  */
+function generateHostKey(): string {
+  for (let attempt = 0; attempt < 10; attempt += 1) {
+    const privateKey = utils.generateKeyPairSync('ed25519').private
+    const parsed = utils.parseKey(privateKey)
+    if (!(parsed instanceof Error)) return privateKey
+  }
+  throw new Error('could not generate a valid SSH host key')
+}
+
 async function startSftpServer(root: string): Promise<{ server: Server; net: NetServer; port: number }> {
-  const hostKey = utils.generateKeyPairSync('ed25519').private
+  const hostKey = generateHostKey()
   let netServer: NetServer | undefined
   const sshServer = new Server({ hostKeys: [hostKey] }, client => {
     client.on('error', () => undefined)
