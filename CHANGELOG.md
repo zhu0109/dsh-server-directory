@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Illustrated Chinese plugin guide with feature screenshots in `docs/plugin-guide.md`.
+- Illustrated Chinese plugin guide in `docs/plugin-guide.md`, with six screenshots embedded as base64 data URIs so the document is self-contained.
 
 ### Fixed
 
